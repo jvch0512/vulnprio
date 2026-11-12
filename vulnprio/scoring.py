@@ -32,11 +32,6 @@ def _bucket(score: float) -> tuple[str, int]:
     return "P3", 90
 
 
-def _worse(a: str, b: str) -> str:
-    """Return the more urgent of two priority labels (P0 is most urgent)."""
-    return a if a <= b else b
-
-
 def score_finding(f: Finding, epss: float, in_kev: bool) -> ScoredFinding:
     if not 0.0 <= f.cvss <= 10.0:
         raise ValueError(f"CVSS out of range for {f.cve}: {f.cvss}")
@@ -62,7 +57,7 @@ def score_finding(f: Finding, epss: float, in_kev: bool) -> ScoredFinding:
     if in_kev:
         reasons.append("listed in CISA KEV (exploited in the wild)")
         floor = "P0" if f.exposure.lower() == "internet" else "P1"
-        if _worse(priority, floor) != priority or priority != floor and priority > floor:
+        if priority > floor:  # "P3" > "P1" lexicographically means less urgent
             priority = floor
             sla = {"P0": 3, "P1": 14}[floor]
         score = max(score, 75.0 if floor == "P0" else 50.0)
