@@ -1,0 +1,11 @@
+[
+  {"cve": "CVE-2023-4966", "asset": "vpn-gw-01", "cvss": 9.4, "criticality": "critical", "exposure": "internet", "title": "Citrix Bleed session token leak"},
+  {"cve": "CVE-2021-44228", "asset": "app-log-03", "cvss": 10.0, "criticality": "high", "exposure": "internal", "title": "Log4Shell remote code execution"},
+  {"cve": "CVE-2024-3400", "asset": "fw-edge-02", "cvss": 10.0, "criticality": "critical", "exposure": "internet", "title": "PAN-OS GlobalProtect command injection"},
+  {"cve": "CVE-2022-22965", "asset": "hr-portal", "cvss": 9.8, "criticality": "medium", "exposure": "internal", "title": "Spring4Shell"},
+  {"cve": "CVE-2020-1472", "asset": "dc-01", "cvss": 10.0, "criticality": "critical", "exposure": "internal", "title": "Zerologon"},
+  {"cve": "CVE-2023-38545", "asset": "build-agent-7", "cvss": 9.8, "criticality": "low", "exposure": "internal", "title": "curl SOCKS5 heap overflow"},
+  {"cve": "CVE-2019-0708", "asset": "legacy-rdp", "cvss": 9.8, "criticality": "low", "exposure": "internal", "title": "BlueKeep"},
+  {"cve": "CVE-2023-0001", "asset": "wiki", "cvss": 5.3, "criticality": "low", "exposure": "internal", "title": "Information disclosure (sample)"},
+  {"cve": "CVE-2023-0002", "asset": "shop-web", "cvss": 7.5, "criticality": "high", "exposure": "internet", "title": "Denial of service (sample)"}
+]
